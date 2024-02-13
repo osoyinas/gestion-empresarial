@@ -1,0 +1,43 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Servidores</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind" title="Página web estática">
+          Hospeda una página web de forma simple y rápida.
+        </Feature>
+        <Feature icon="mdi:wheelchair-accessibility" title="Página web dinámica">
+          Hospeda una página web dinámica personalizada.
+        </Feature>
+        <Feature icon="mdi:looks" title="Videojuegos">
+          Minecraft, ARK, Rust, GTA V, etc.
+        </Feature>
+
+        <Feature icon="mdi:looks" title="Almacenamiento">
+          Personaliza tu propip Google Drive. 
+        </Feature>
+        
+      </div>
+    </div>
+  </section>
+  <section class="mb-32 mt-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Estadísticas</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="520" title="Servidores" sub="en funcionamiento" />
+        <Counter count="40" title="Personas" sub="en nuestro equipo" />
+        <Counter count="2" title="Sedes" sub="en Madrid" />
+        <Counter count="2+" title="meses" sub="en funcionamiento" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
